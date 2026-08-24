@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borek Studio</title>
+<style>
+  :root{
+    --bg:#f7f6f3;
+    --fg:#1a1a1a;
+    --muted:#8a8580;
+    --card:#ffffff;
+    --border:#e5e2dc;
+    --accent:#1a1a1a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141312;
+      --fg:#f2f0ec;
+      --muted:#8a8580;
+      --card:#1d1c1a;
+      --border:#2c2a27;
+      --accent:#f2f0ec;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:6vh 5vw 8vh;
+  }
+  h1{
+    font-size:clamp(2rem,5vw,2.75rem);
+    font-weight:600;
+    letter-spacing:-0.02em;
+    margin:0 0 4rem;
+  }
+  .columns{
+    width:100%;
+    max-width:760px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem;
+  }
+  @media (max-width:600px){
+    .columns{grid-template-columns:1fr;gap:3rem;}
+  }
+  .column h2{
+    font-size:0.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--muted);
+    margin:0 0 1rem;
+  }
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:0.6rem;
+  }
+  .links a{
+    display:block;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:0.9rem 1.1rem;
+    color:var(--fg);
+    text-decoration:none;
+    font-size:0.98rem;
+    font-weight:500;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .links a:hover{
+    border-color:var(--accent);
+    transform:translateY(-1px);
+  }
+  .empty{
+    color:var(--muted);
+    font-size:0.9rem;
+    font-style:italic;
+    padding:0.9rem 0;
+  }
+</style>
+</head>
+<body>
+  <h1>Borek Studio</h1>
+  <div class="columns">
+    <div class="column">
+      <h2>Albert</h2>
+      <div class="links">
+        <span class="empty">wkrótce</span>
+      </div>
+    </div>
+    <div class="column">
+      <h2>Marcin</h2>
+      <div class="links">
+        <a href="https://qumo11.github.io/genesis-horse/">Genesis Horse — ośrodek jeździecki</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
